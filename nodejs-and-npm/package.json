@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "parcel ./index.html",
+    "build": "parcel ./build index.html"
+  },
+  "dependencies": {
+    "card-validator": "^10.0.0",
+    "email-validator": "^2.0.4",
+    "inputmask": "^5.0.9",
+    "redom": "^4.1.5"
+  },
+  "devDependencies": {
+    "parcel": "^2.13.2"
+  }
+}

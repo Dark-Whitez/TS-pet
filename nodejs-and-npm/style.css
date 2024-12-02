@@ -1,0 +1,153 @@
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 160px;
+}
+
+.pay__container {
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+.pay__form {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pay__main {
+    display: flex;
+    width: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.pay__icon {
+    display: flex;
+    width: 80%;
+    height: 37px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    justify-content: flex-end;
+}
+
+.pay__input {
+    font-size: 28px;
+    line-height: 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    transition: border-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.pay__number {
+    width: 272px;
+    margin-bottom: 20px;
+}
+
+.pay__down {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.pay__date {
+    display: flex;
+    align-items: center;
+}
+
+.pay__dateSpane {
+    font-size: 28px;
+    line-height: 20px;
+}
+
+.pay__month {
+    width: 33px;
+}
+
+.pay__month::-webkit-outer-spin-button,
+.pay__month::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.pay__year {
+    width: 33px;
+}
+
+.pay__year::-webkit-outer-spin-button,
+.pay__year::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.pay__pin {
+    width: 48px;
+}
+
+.pay__email {
+    margin-bottom: 20px;
+}
+
+.pay__icon-card {
+    width: 100% !important;
+    height: 100% !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: right !important;
+}
+
+.pay__logo {
+    background-image: url('./img/pay-logo.svg');
+}
+
+.pay__mir-icon {
+    background-image: url('./img/Mir-logo.svg');
+}
+
+.pay__visa-icon {
+    background-image: url('./img/Visa_logo.svg');
+}
+
+.pay__maestro-icon {
+    background-image: url('./img/Maestro_logo.svg');
+}
+
+.pay__unionpay-icon {
+    background-image: url('./img/UnionPay_logo.svg');
+}
+
+.pay__btn-disable {
+    width: 200px;
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+.pay__btn {
+    border: 1px solid transparent;
+    border-color: #007bff;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: border-color .3s ease-in-out, background-color .3s ease-in-out;
+}
+
+.pay__btn:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+    text-decoration: none;
+}
+
+.pay__btn:active {
+    background-color: #0062cc;
+    border-color: #005cbf;
+    text-decoration: none;
+}
