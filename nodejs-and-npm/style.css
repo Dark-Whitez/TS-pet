@@ -125,6 +125,17 @@ body {
     background-image: url('./img/UnionPay_logo.svg');
 }
 
+.pay__txt-error {
+    font-weight: 900;
+    font-size: 25px;
+    color: red;
+    margin-bottom: 15px;
+}
+
+.pay__txt-error-hidden {
+    display: none;
+}
+
 .pay__btn-disable {
     width: 200px;
     font-size: 20px;

@@ -51,15 +51,18 @@ numberCard.addEventListener('blur', () => {
         if (numberValidation.card?.type === 'mir' || numberValidation.card?.type === 'visa' || numberValidation.card?.type === 'maestro' || numberValidation.card?.type === 'unionpay') {
             numberCard.style = 'border-color: #00db00';
             numberCard.style.color = '#00db00'
+            txtError.classList.add('pay__txt-error-hidden');
             trueDate.push('true');
         } else {
             if (numberCard.value.length > 1) {
                 numberCard.style = 'border-color: red';
                 numberCard.style.color = 'red';
+                txtError.classList.remove('pay__txt-error-hidden');
                 trueDate.pop();
             } else {
                 numberCard.style = 'border-color: #000';
                 numberCard.style.color = '#000';
+                txtError.classList.add('pay__txt-error-hidden');
                 trueDate.pop();
             }
         };
@@ -92,15 +95,18 @@ monthInput.addEventListener('input', () => {
         if (numberValidation.isValid) {
             monthInput.style = 'border-color: #00db00';
             monthInput.style.color = '#00db00';
+            txtError.classList.add('pay__txt-error-hidden');
             trueDate.push('true');
         } else {
             if (monthInput.value.length > 1) {
                 monthInput.style = 'border-color: red';
                 monthInput.style.color = 'red';
+                txtError.classList.remove('pay__txt-error-hidden');
                 trueDate.pop();
             } else {
                 monthInput.style = 'border-color: #000';
                 monthInput.style.color = '#000';
+                txtError.classList.add('pay__txt-error-hidden');
                 trueDate.pop();
             };
         };
@@ -124,15 +130,18 @@ yearInput.addEventListener('blur', () => {
         if (numberValidation.isValid) {
             yearInput.style = 'border-color: #00db00';
             yearInput.style.color = '#00db00';
+            txtError.classList.add('pay__txt-error-hidden');
             trueDate.push('true');
         } else {
             if (yearInput.value.length > 1) {
                 yearInput.style = 'border-color: red';
                 yearInput.style.color = 'red';
+                txtError.classList.remove('pay__txt-error-hidden');
                 trueDate.pop();
             } else {
                 yearInput.style = 'border-color: #000';
                 yearInput.style.color = '#000';
+                txtError.classList.add('pay__txt-error-hidden');
                 trueDate.pop();
             };
         };
@@ -158,15 +167,18 @@ pinInput.addEventListener('blur', () => {
         if (numberValidation.isValid) {
             pinInput.style = 'border-color: #00db00';
             pinInput.style.color = '#00db00';
+            txtError.classList.add('pay__txt-error-hidden');
             trueDate.push('true');
         } else {
             if (pinInput.value.length > 1) {
                 pinInput.style = 'border-color: red';
                 pinInput.style.color = 'red';
+                txtError.classList.remove('pay__txt-error-hidden');
                 trueDate.pop();
             } else {
                 pinInput.style = 'border-color: #000';
                 pinInput.style.color = '#000';
+                txtError.classList.add('pay__txt-error-hidden');
                 trueDate.pop();
             };
         };
@@ -188,6 +200,9 @@ const emailInput = el('input', { class: 'pay__input pay__email' }, { type: "text
 const email = new Inputmask("*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]");
 email.mask(emailInput);
 
+const txtError = el('span', { class: 'pay__txt-error pay__txt-error-hidden' });
+txtError.innerHTML = "Ошибка ввода данных";
+
 const buttonPay = el('button', { class: 'pay__btn-disable' }, { type: 'submit' });
 buttonPay.innerHTML = 'Оплатить';
 buttonPay.disabled = true;
@@ -198,15 +213,18 @@ emailInput.addEventListener('blur', () => {
         if (EmailValidator.validate(emailInput.value)) {
             emailInput.style = 'border-color: #00db00';
             emailInput.style.color = '#00db00';
+            txtError.classList.add('pay__txt-error-hidden');
             trueDate.push('true');
         } else {
             if (emailInput.value.length > 1) {
                 emailInput.style = 'border-color: red';
                 emailInput.style.color = 'red';
+                txtError.classList.remove('pay__txt-error-hidden');
                 trueDate.pop();
             } else {
                 emailInput.style = 'border-color: #000';
                 emailInput.style.color = '#000';
+                txtError.classList.add('pay__txt-error-hidden');
                 trueDate.pop();
             };
         };
@@ -221,8 +239,6 @@ emailInput.addEventListener('blur', () => {
     }, 500);
 });
 
-console.log(trueDate);
-
-const formPay = el('form', { class: 'pay__form' }, divMain, emailInput, buttonPay);
+const formPay = el('form', { class: 'pay__form' }, divMain, emailInput, txtError, buttonPay);
 const div = el('div', { class: 'pay__container' }, formPay);
 mount(document.body, div);
