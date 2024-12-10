@@ -52,18 +52,15 @@ numberCard.addEventListener('blur', () => {
             numberCard.style = 'border-color: #00db00';
             numberCard.style.color = '#00db00'
             trueDate.push('true');
-            console.log(`True:${trueDate}`);
         } else {
             if (numberCard.value.length > 1) {
                 numberCard.style = 'border-color: red';
                 numberCard.style.color = 'red';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             } else {
                 numberCard.style = 'border-color: #000';
                 numberCard.style.color = '#000';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             }
         };
 
@@ -96,18 +93,15 @@ monthInput.addEventListener('input', () => {
             monthInput.style = 'border-color: #00db00';
             monthInput.style.color = '#00db00';
             trueDate.push('true');
-            console.log(`True:${trueDate}`);
         } else {
             if (monthInput.value.length > 1) {
                 monthInput.style = 'border-color: red';
                 monthInput.style.color = 'red';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             } else {
                 monthInput.style = 'border-color: #000';
                 monthInput.style.color = '#000';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             };
         };
 
@@ -131,18 +125,15 @@ yearInput.addEventListener('blur', () => {
             yearInput.style = 'border-color: #00db00';
             yearInput.style.color = '#00db00';
             trueDate.push('true');
-            console.log(`True:${trueDate}`);
         } else {
             if (yearInput.value.length > 1) {
                 yearInput.style = 'border-color: red';
                 yearInput.style.color = 'red';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             } else {
                 yearInput.style = 'border-color: #000';
                 yearInput.style.color = '#000';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             };
         };
 
@@ -168,18 +159,15 @@ pinInput.addEventListener('blur', () => {
             pinInput.style = 'border-color: #00db00';
             pinInput.style.color = '#00db00';
             trueDate.push('true');
-            console.log(`True:${trueDate}`);
         } else {
             if (pinInput.value.length > 1) {
                 pinInput.style = 'border-color: red';
                 pinInput.style.color = 'red';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             } else {
                 pinInput.style = 'border-color: #000';
                 pinInput.style.color = '#000';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             };
         };
 
@@ -211,18 +199,15 @@ emailInput.addEventListener('blur', () => {
             emailInput.style = 'border-color: #00db00';
             emailInput.style.color = '#00db00';
             trueDate.push('true');
-            console.log(`True:${trueDate}`);
         } else {
             if (emailInput.value.length > 1) {
                 emailInput.style = 'border-color: red';
                 emailInput.style.color = 'red';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             } else {
                 emailInput.style = 'border-color: #000';
                 emailInput.style.color = '#000';
                 trueDate.pop();
-                console.log(`False:${trueDate}`);
             };
         };
 
